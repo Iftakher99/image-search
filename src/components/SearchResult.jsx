@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+// eslint-disable-next-line react/prop-types
 const SearchResult = ({ term }) => {
   const [images, setImages] = useState([]);
   const apiUrl = `https://api.unsplash.com/search/photos`;
