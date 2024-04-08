@@ -29,6 +29,7 @@ const SearchResult = ({ term }) => {
     }
   }, [apiUrl, term]);
 
+  console.log(images);
   return (
     <div>
       <h2>Search Result for: {term}</h2>

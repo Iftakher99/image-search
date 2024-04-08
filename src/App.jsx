@@ -1,18 +1,19 @@
 import { useState } from 'react';
-import SearchBar from './components/SearchBar';
+import SearchBox from './components/SearchBox';
+import ShowResult from './components/ShowResult';
 import SearchResult from './components/SearchResult';
-
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearchTermChange = (term) => {
-    setSearchTerm(term);
+  const [term, setTerm] = useState('');
+  const handleSearch = (term) => {
+    setTerm(term);
   };
+  console.log(term);
 
   return (
     <>
-      <SearchBar onSearchTermChange={handleSearchTermChange} />
-      <SearchResult term={searchTerm} />
+      <SearchBox onSearch={handleSearch} />
+      <ShowResult term={term} />
+      {/* <SearchResult term={term} /> */}
     </>
   );
 };
