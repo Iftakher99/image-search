@@ -15,7 +15,7 @@ const ShowResult = ({ term }) => {
             },
           },
         );
-
+        // set image data to variable
         setImages(response.data);
       } catch (error) {
         console.log('Error', error);
